@@ -8,15 +8,21 @@ pipeline {
             }
 
         }
-        stage('init') {
-            steps {
-                sh 'terraform init'
-            }
+        // stage('init') {
+            // steps {
+               // sh 'terraform init'
+          //  }
 
-        }
-        stage('apply') {
+      //  }
+       // stage('apply') {
+          //  steps {
+             //   sh 'terraform apply -auto-approve'
+           // }
+
+       // }
+          stage('destroy') {
             steps {
-                sh 'terraform apply -auto-approve'
+                sh 'terraform destroy -auto-approve'
             }
 
         }
